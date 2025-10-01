@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Arjun Kumar",
+    "gender": "male",
+    "bloodGroup": "A+",
+    "location": "Tirur",
+    "phone": "9876543210",
+    "availability": "Available"
+  },
+  {
+    "id": 2,
+    "name": "Sneha P",
+    "gender": "female",
+    "bloodGroup": "O-",
+    "location": "Kottakkal",
+    "phone": "9123456780",
+    "availability": "Not Available"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Menon",
+    "gender": "male",
+    "bloodGroup": "B+",
+    "location": "Malappuram",
+    "phone": "9988776655",
+    "availability": "Available"
+  },
+  {
+    "id": 4,
+    "name": "Priya Nair",
+    "gender": "female",
+    "bloodGroup": "AB+",
+    "location": "Tirur",
+    "phone": "9876541234",
+    "availability": "Available"
+  },
+  {
+    "id": 5,
+    "name": "Karthik S",
+    "gender": "male",
+    "bloodGroup": "O+",
+    "location": "Kottakkal",
+    "phone": "9654321098",
+    "availability": "Available"
+  },
+  {
+    "id": 6,
+    "name": "Aisha Khan",
+    "gender": "female",
+    "bloodGroup": "A-",
+    "location": "Malappuram",
+    "phone": "9123456789",
+    "availability": "Not Available"
+  },
+  {
+    "id": 7,
+    "name": "Vijay Raj",
+    "gender": "male",
+    "bloodGroup": "B-",
+    "location": "Tirur",
+    "phone": "9988771122",
+    "availability": "Available"
+  },
+  {
+    "id": 8,
+    "name": "Deepa M",
+    "gender": "female",
+    "bloodGroup": "AB-",
+    "location": "Kottakkal",
+    "phone": "9876547890",
+    "availability": "Available"
+  },
+  {
+    "id": 9,
+    "name": "Praveen MT",
+    "gender": "male",
+    "bloodGroup": "O+",
+    "location": "Kadalundi",
+    "phone": "8590319003",
+    "availability": "Available"
+  }
+]
