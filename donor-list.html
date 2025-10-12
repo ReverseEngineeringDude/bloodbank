@@ -104,6 +104,29 @@
             <option value="Not Available">Not Available</option>
           </select>
         </div>
+        <div class="flex items-center space-x-2 mt-6 md:mt-8">
+          <input id="filterUniversal" type="checkbox"
+            class="h-4 w-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+          <label for="filterUniversal" class="text-sm font-medium text-gray-700">
+            Show Universal Donors
+          </label>
+          <!-- tooltip -->
+          <div class="relative group inline-block">
+            <svg class="w-6 h-6 text-gray-600 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <title>Info</title>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+            </svg>
+            <div
+              class="absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 whitespace-nowrap z-10">
+              Universal Donors can donate to any blood group.
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
     </section>
 

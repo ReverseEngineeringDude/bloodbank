@@ -22,17 +22,34 @@
                 transform: translateY(0);
             }
         }
+
+        /* Carousel styling */
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        .carousel-item img {
+            filter: brightness(0.7);
+        }
+
+        /* Navbar transition */
+        header {
+            transition: background-color 0.4s ease, box-shadow 0.4s ease;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header / Navbar -->
-    <header class="bg-red-600 text-white shadow-md sticky top-0 z-50">
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent text-white">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <!-- Title -->
             <h1 class="text-2xl md:text-3xl font-bold">🩸 Blood Bank System</h1>
-
-            <!-- Hamburger Button -->
             <button id="hamburgerBtn" class="flex flex-col justify-between w-6 h-6 focus:outline-none">
                 <span class="block h-0.5 w-full bg-white transition"></span>
                 <span class="block h-0.5 w-full bg-white transition"></span>
@@ -40,91 +57,130 @@
             </button>
         </div>
 
-        <!-- Navbar Links (Hidden by default) -->
         <nav id="mobileMenu" class="hidden bg-red-700 text-white text-center">
             <a href="index.html" class="block px-4 py-2 hover:bg-red-600 transition">Home</a>
-            <a href="donor-list.html" class="block px-4 py-2 hover:bg-red-600 transition">Donor List</a>
+            <a href="donor-list.html" class="block px-4 py-2 hover:bg-red-600 transition">Donor Search</a>
             <a href="#about" class="block px-4 py-2 hover:bg-red-600 transition">About</a>
         </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-16 fade-in">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Save Lives, Donate Blood</h2>
-        <p class="text-lg max-w-2xl mx-auto">
-            Find blood donors in your area quickly and easily. Our platform connects those in need with willing donors.
-        </p>
-    </section>
-
-    <!-- Search Section -->
-    <main class="container mx-auto px-4 py-10">
-        <section
-            class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-12 fade-in border border-gray-100">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">🔍 Search for Donors</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                    <label for="bloodGroup" class="block text-sm font-medium text-gray-700 mb-2">Blood Group</label>
-                    <select id="bloodGroup"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500">
-                        <option value="">All Blood Groups</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="location" class="block text-sm font-medium text-gray-700 mb-2">Location</label>
-                    <select id="location"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500">
-                        <option value="">All Locations</option>
-                        <option value="Tirur">Tirur</option>
-                        <option value="Kottakkal">Kottakkal</option>
-                        <option value="Malappuram">Malappuram</option>
-                    </select>
+    <!-- Fullscreen Carousel -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <div class="carousel relative h-full">
+            <!-- Slide 1 -->
+            <div class="carousel-item absolute inset-0 active">
+                <img src="./avatar/images/blooddonation1.jpeg" alt="Donate Blood" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">“A drop of blood can save a river of lives.”</h2>
                 </div>
             </div>
 
-            <button id="searchBtn"
-                class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition transform hover:scale-105">
-                Search Donors
-            </button>
-        </section>
+            <!-- Slide 2 -->
+            <div class="carousel-item absolute inset-0">
+                <img src="./avatar/images/blooddonation2.jpg" alt="Blood Donation" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">“Be a hero in someone’s life — donate blood.”</h2>
+                </div>
+            </div>
 
-        <!-- About Section -->
-        <section id="about"
-            class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 fade-in border border-gray-100">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">About This Project</h3>
-            <p class="text-gray-600 mb-4">
-                The Online Blood Bank Management System is a <strong>college demo project</strong> designed to show how
-                technology can facilitate blood donation and help save lives. This platform allows users to search for
-                blood
-                donors based on blood group and location.
+            <!-- Slide 3 -->
+            <div class="carousel-item absolute inset-0">
+                <img src="./avatar/images/blooddonation3.jpg" alt="Save Lives" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">“Your blood is the gift of life — share it.”</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button id="prevBtn"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-red-600 p-3 rounded-full shadow-md">
+            ◀
+        </button>
+        <button id="nextBtn"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-red-600 p-3 rounded-full shadow-md">
+            ▶
+        </button>
+    </section>
+
+    <!-- Importance Section -->
+    <main class="container mx-auto px-4 py-16">
+        <section class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 fade-in border border-gray-100">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">❤️ Why Blood Donation Matters</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                Blood is vital for surgeries, cancer treatment, chronic illnesses, and trauma care. Yet, only a small
+                fraction of eligible people donate. One donation can save up to <strong>three lives</strong>.
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
-                <li>Search donors by blood group and location</li>
-                <li>View detailed donor information</li>
-                <li>Mobile-friendly and responsive design</li>
-                <li>Quick contact options for urgent needs</li>
-            </ul>
-            <p class="text-gray-500 mt-4 italic">
-                Note: This is a demonstration project with sample JSON data for educational purposes.
-            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 bg-red-50 rounded-xl border border-red-100">
+                    <h4 class="text-lg font-semibold text-red-600 mb-2">Save Lives</h4>
+                    <p class="text-gray-600 text-sm">Your small act of kindness can mean life for someone in need.</p>
+                </div>
+                <div class="p-4 bg-red-50 rounded-xl border border-red-100">
+                    <h4 class="text-lg font-semibold text-red-600 mb-2">Stay Healthy</h4>
+                    <p class="text-gray-600 text-sm">Regular donation improves heart health and maintains iron balance.
+                    </p>
+                </div>
+                <div class="p-4 bg-red-50 rounded-xl border border-red-100">
+                    <h4 class="text-lg font-semibold text-red-600 mb-2">Build Humanity</h4>
+                    <p class="text-gray-600 text-sm">Each donation strengthens our shared sense of compassion and care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="donor-list.html"
+                    class="inline-block bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition transform hover:scale-105">
+                    🔍 Search Donors Now
+                </a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 mt-12">
         <div class="container mx-auto px-4 py-6 text-center text-sm">
-            <p>&copy; 2025 Online Blood Bank Management System • College Project Demo</p>
+            <p>Online Blood Bank Management System • By Team ShelBy LTD</p>
         </div>
     </footer>
+
+    <!-- Carousel Script -->
+    <script>
+        const slides = document.querySelectorAll('.carousel-item');
+        let current = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        });
+
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 6000);
+
+        // Navbar background change on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight - 100) {
+                navbar.classList.remove('bg-transparent', 'text-white');
+                navbar.classList.add('bg-red-600', 'text-white', 'shadow-md');
+            } else {
+                navbar.classList.add('bg-transparent', 'text-white');
+                navbar.classList.remove('bg-red-600', 'shadow-md');
+            }
+        });
+    </script>
 
     <script src="./js/script.js"></script>
     <script src="./js/global.js"></script>
