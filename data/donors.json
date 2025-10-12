@@ -85,7 +85,7 @@
     "name": "jumanajaniya",
     "gender": "female",
     "bloodGroup": "B+",
-    "location": "tirur",
+    "location": "Tirur",
     "phone": "8594007939",
     "availability": "Not Available"
   },
@@ -94,7 +94,7 @@
     "name": "Aleena fathima",
     "gender": "female",
     "bloodGroup": "A+",
-    "location": "tirur",
+    "location": "Tirur",
     "phone": "8573619373",
     "availability": "Not Available"
   },
@@ -103,7 +103,7 @@
     "name": "Prarthana",
     "gender": "female",
     "bloodGroup": "A-",
-    "location": "kottakal",
+    "location": "Kottakkal",
     "phone": "3719374729",
     "availability": "Available"
   },
@@ -112,7 +112,7 @@
     "name": "Asif kamal",
     "gender": "male",
     "bloodGroup": "B-",
-    "location": "kottakal",
+    "location": "Kottakkal",
     "phone": "8372629372",
     "availability": "Available"
   },
@@ -121,7 +121,7 @@
     "name": "Afthab",
     "gender": "male",
     "bloodGroup": "AB+",
-    "location": "malappuram",
+    "location": "Malappuram",
     "phone": "3817393726",
     "availability": "Available"
   },
@@ -130,7 +130,7 @@
     "name": "Hari",
     "gender": "male",
     "bloodGroup": "AB-",
-    "location": "tirur",
+    "location": "Tirur",
     "phone": "8362639472",
     "availability": "Not Available"
   },
@@ -139,7 +139,7 @@
     "name": "Hashir",
     "gender": "male",
     "bloodGroup": "O-",
-    "location": "malappuram",
+    "location": "Malappuram",
     "phone": "7392736163",
     "availability": "Not Available"
   },
@@ -148,7 +148,7 @@
     "name": "Adhinadh",
     "gender": "male",
     "bloodGroup": "A-",
-    "location": "Kottakal",
+    "location": "Kottakkal",
     "phone": "8362517394",
     "availability": "Available"
   }
